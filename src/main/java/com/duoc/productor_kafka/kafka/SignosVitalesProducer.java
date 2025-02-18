@@ -1,4 +1,4 @@
-package com.duoc.productor_kafka.service;
+package com.duoc.productor_kafka.kafka;
 
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
@@ -14,7 +14,7 @@ public class SignosVitalesProducer {
     }
 
     public void enviarSignosVitales(SignosVitalesKafkaDTO signosVitales) {
-        kafkaTemplate.send("signos_vitales", signosVitales);
+        kafkaTemplate.send("senales_vitales", signosVitales);
         System.out.println("Enviado a Kafka: " + signosVitales);
     }
 }
